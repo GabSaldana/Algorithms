@@ -1,0 +1,85 @@
+/*
+Consider an Array a of size N Iterate from 1 to N In ith iteration select the ith minimum and swap it with a[i]
+
+You are given an array a, size of the array N and an integer x. Follow the above algorithm and print the state of the array
+ after x iterations have been performed.
+
+Input Format
+
+The first line contains two integer N and 
+x denoting the size of the array and the steps of the above algorithm to be performed respectively. The next line contains 
+N space separated integers denoting the elements of the array.
+
+Output Format
+
+Print N space separated integers denoting the state of the array after x steps
+
+Constraints
+
+1≤N≤100
+1≤a[i]≤100
+1≤x≤N
+
+*/
+
+#include <iostream>
+#include <algorithm>//swap
+using namespace std;
+
+/*INPUTS*/
+
+int n;//size of the array
+int x;//number of steps
+int A[100];//array to be sorted x steps
+
+void getInput(){
+
+	cin >> n; 
+	cin >> x;
+
+	for(int i=0; i<n ; i++){
+
+		int aux;
+		cin >> aux;
+		A[i]=aux;
+		//cout << A[i] << " ";
+	}
+	//cout << endl;
+}
+
+void print(int A[]){
+
+	for(int i=0; i<n; i++){
+
+		cout << A[i] << " ";
+	}
+	cout << endl;
+}
+
+void selectionSort(int A[], int n, int x){
+
+	int minimum;
+
+	for(int i=0; i<x; i++){//ya que el i+1 no existiria si corre hasta n
+		minimum=i;
+
+		for(int j=i+1; j<n; j++){
+
+			if(A[minimum] > A[j]){
+				minimum=j;
+			}
+		}
+		swap(A[minimum],A[i]);
+	}
+
+}
+
+int main(int argc, char const *argv[]){
+	
+	getInput();
+	selectionSort(A,n,x);
+	print(A);
+
+	return 0;
+}
+

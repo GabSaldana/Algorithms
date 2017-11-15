@@ -1,0 +1,13 @@
+Tell me about yourself.
+
+How do you handle failure?
+How do you handle success?
+Do you work well with other people?
+What problems have you encountered at work?
+When was the last time you were angry? What happened?
+What type of work environment do you prefer?
+Questions about your resume.
+
+-What was the most difficult you encounter while developing the java multicast chat?
+-Whta were the most difficult problems you found in the FES Acatlan contest?
+-How did you guys manage to get the third place in that contest? was it difficult?
